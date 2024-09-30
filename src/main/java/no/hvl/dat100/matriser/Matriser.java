@@ -28,17 +28,40 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
-	
+		for(int i = 0; i<matrise.length;i++) {
+			int[] kolonner = matrise[i];
+			for(int j = 0; j<kolonner.length;j++) {
+				kolonner[j] *= tall;
+			}
+		}
+		int[][] m = matrise;
+		return m;
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
+		boolean sannhet = true;
+		if (a.length != b.length) {
+			sannhet = false;
+			return sannhet;
+		}
+		for (int i = 0; i<a.length;i++) {
+			int[] kolonner1 = a[i];
+			int[] kolonner2 = b[i];
+			if (kolonner1.length != kolonner2.length) {
+				sannhet = false;
+				return sannhet;
+			}
+			for(int j = 0; j<kolonner1.length;j++) {
+				int tall1 = kolonner1[j];
+				int tall2 = kolonner2[j];
+				if (tall1 != tall2) {
+					sannhet = false;
+					return sannhet;
+				}
+			}
+		}
+		return sannhet;
 		
 	}
 	
