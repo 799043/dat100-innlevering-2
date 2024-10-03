@@ -58,7 +58,8 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-		int[] tab = {};
+		int[] tab;
+		tab = new int[tabell.length];
 		int j = 0;
 		for(int i = tabell.length - 1; i>=0; i--) {
 			tab[j] = tabell[i];
@@ -71,8 +72,9 @@ public class Tabeller {
 	public static boolean erSortert(int[] tabell) {
 		boolean sannhet = true;
 		for (int i = 0; i<tabell.length;i++) {
+			// tabell[i+1] skaper problemer, finn alternativ
 			if (tabell[i] > tabell[i+1]) {
-				sannhet = false;
+				return sannhet = false;
 			}
 		}
 		return sannhet;

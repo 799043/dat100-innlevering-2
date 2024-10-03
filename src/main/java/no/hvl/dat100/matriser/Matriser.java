@@ -34,30 +34,26 @@ public class Matriser {
 				kolonner[j] *= tall;
 			}
 		}
-		int[][] m = matrise;
-		return m;
+		return matrise;
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 		boolean sannhet = true;
 		if (a.length != b.length) {
-			sannhet = false;
-			return sannhet;
+			return sannhet = false;
 		}
 		for (int i = 0; i<a.length;i++) {
 			int[] kolonner1 = a[i];
 			int[] kolonner2 = b[i];
 			if (kolonner1.length != kolonner2.length) {
-				sannhet = false;
-				return sannhet;
+				return sannhet = false;
 			}
 			for(int j = 0; j<kolonner1.length;j++) {
 				int tall1 = kolonner1[j];
 				int tall2 = kolonner2[j];
 				if (tall1 != tall2) {
-					sannhet = false;
-					return sannhet;
+					return sannhet = false;
 				}
 			}
 		}
