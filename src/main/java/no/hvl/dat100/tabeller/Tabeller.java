@@ -71,8 +71,7 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
 		boolean sannhet = true;
-		for (int i = 0; i<tabell.length;i++) {
-			// tabell[i+1] skaper problemer, finn alternativ
+		for (int i = 0; i<tabell.length - 1;i++) {
 			if (tabell[i] > tabell[i+1]) {
 				return sannhet = false;
 			}
